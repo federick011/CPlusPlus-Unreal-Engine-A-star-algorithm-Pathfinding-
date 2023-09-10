@@ -1,0 +1,27 @@
+# Ignore all the typical build directories
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
+
+# Ignore user-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore VS Code settings
+.vscode/
+.vs/
+
+# Ignore Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Ignore Mac files
+.DS_Store
+*.ipch
+.vs/AStar_Algorithm/v17/Browse.VC.db
+.vs/AStar_Algorithm/v17/Browse.VC.db-shm
+.vs/AStar_Algorithm/v17/Browse.VC.db-wal
