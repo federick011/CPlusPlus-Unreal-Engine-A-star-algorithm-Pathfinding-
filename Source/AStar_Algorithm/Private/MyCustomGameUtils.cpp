@@ -5,6 +5,9 @@
 
 void UMyCustomGameUtils::ChangeMaterialColor(AActor* staticMesh, FColor color)
 {
+	if (staticMesh == nullptr)
+		return;
+
 	UStaticMeshComponent* meshReference = staticMesh->GetComponentByClass<UStaticMeshComponent>();
 
 	if (meshReference == nullptr)
@@ -22,6 +25,9 @@ void UMyCustomGameUtils::CheckNodesDistance(FVector& pointA, FVector& pointB, fl
 
 void UMyCustomGameUtils::CheckNodesDistance(AActor* actorA, AActor* actorB, float& distance)
 {
+	if (actorA == nullptr || actorB == nullptr)
+		return;
+
 	FVector pointA = actorA->GetActorLocation();
 	FVector pointB = actorB->GetActorLocation();
 	distance = FVector::Dist(pointA, pointB);
@@ -36,6 +42,9 @@ void UMyCustomGameUtils::CheckNodesDistance(USceneComponent* actorA, USceneCompo
 
 void UMyCustomGameUtils::DrawPermanentPathsBetweenNodes(UWorld* world, FVector& StartPoint, FVector& EndPoint, FColor LineColor, float tickness)
 {
+	if (world == nullptr)
+		return;
+
 	DrawDebugLine(world, StartPoint, EndPoint, LineColor, true, 0.1f, 0, tickness);
 }
 
