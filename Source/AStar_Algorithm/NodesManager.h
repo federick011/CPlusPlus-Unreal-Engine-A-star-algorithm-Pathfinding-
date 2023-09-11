@@ -66,8 +66,6 @@ public:
 		TArray<int32> nodesToAvoid;
 
 protected:
-	// Called when the game starts
-	virtual void BeginPlay() override;
 
 	void CreateConectionsBetweenNodes();
 
@@ -77,9 +75,5 @@ protected:
 
 public:	
 
-	void InitializedNodes();
-	// Called every frame
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-
-		
+	void InitializedNodes();	
 };

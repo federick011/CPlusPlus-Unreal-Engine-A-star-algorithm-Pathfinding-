@@ -9,13 +9,7 @@
 // Sets default values for this component's properties
 UNodesManager::UNodesManager()
 {
-	PrimaryComponentTick.bCanEverTick = true;
-}
-
-// Called when the game starts
-void UNodesManager::BeginPlay()
-{
-	Super::BeginPlay();
+	PrimaryComponentTick.bCanEverTick = false;
 }
 
 void UNodesManager::InitializedNodes()
@@ -132,11 +126,5 @@ AActor* UNodesManager::SpawnNodes(FTransform* transform, TSubclassOf<AActor> ref
 	spawnParamters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
 
 	return GetWorld()->SpawnActor<AActor>(reference, *transform, spawnParamters);
-}
-
-// Called every frame
-void UNodesManager::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
-{
-	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 }
 
